@@ -1,0 +1,7 @@
+{
+    "eslint.enable": true,
+    "eslint.lintTask.enable": true,
+    "eslint.format.enable": true,
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "editor.formatOnSave": true
+}

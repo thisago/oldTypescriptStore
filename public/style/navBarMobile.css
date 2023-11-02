@@ -1,0 +1,194 @@
+div.navMenu input[type="checkbox"].menuHamburger,
+div.navMenu input[type="checkbox"].menuHamburger:active,
+div.navMenu input[type="checkbox"].menuHamburger:focus {
+    border: none !important;
+}
+
+div.navMenu input[type="checkbox"].menuHamburger {
+    --menuHamburgerColor: rgb(var(--mainBackgroundColor));
+    --menuHamburgerSize: 4px;
+    display: none;
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+    right: 20px;
+    width: 50px;
+    height: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    z-index: 10;
+    box-shadow: none;
+    top: 10px
+}
+
+div.navMenu input[type="checkbox"].menuHamburger:before {
+    content: "";
+    position: absolute;
+    top: calc(22px - var(--menuHamburgerSize));
+    left: 0;
+    width: 50px;
+    height: var(--menuHamburgerSize);
+    background-color: var(--menuHamburgerColor);
+    transition: all .4s, transform .5s;
+    border-radius: 0;
+    border: 0;
+}
+
+div.navMenu input[type="checkbox"].menuHamburger:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: calc(40px - (var(--menuHamburgerSize) * 2));
+    border: var(--menuHamburgerSize) solid var(--menuHamburgerColor);
+    border-style: solid none solid none;
+    transition: all .3s, transform .5s;
+}
+
+@media (hover:none),
+(hover:on-demand) {
+    div.navMenu {
+        height: 60px;
+    }
+
+    div.navMenu input[type="checkbox"].menuHamburger {
+        display: unset;
+    }
+
+    /* div.navMenu div.menuItems {
+        display: none;
+    } */
+    div.navMenu input[type="checkbox"].menuHamburger:checked {
+        /* --menuHamburgerColor: red; */
+    }
+
+    div.navMenu input[type="checkbox"].menuHamburger:checked:before {
+        height: var(--menuHamburgerSize);
+        transform: rotate(45deg);
+    }
+
+    div.navMenu input[type="checkbox"].menuHamburger:checked:after {
+        width: 50px;
+        height: var(--menuHamburgerSize);
+        transform: rotate(-45deg);
+        border: none;
+        background-color: var(--menuHamburgerColor);
+        top: 18px;
+    }
+
+    /* div.navMenu input[type="checkbox"].menuHamburger:hover:after {
+        top: 16px;
+        width: 60px;
+    } */
+    body:not(.starting)>div.navMenu input[type="checkbox"].menuHamburger:not(:checked).a~div.menuItems {
+        left: -100vw !important;
+    }
+
+    body:not(.starting)>div.navMenu input[type="checkbox"].menuHamburger:checked~div.menuItems div.menuLinkSet {
+        animation: showLinkSetsMobile 2s forwards;
+    }
+
+    div.navMenu div.menuItems {
+        left: -100vw !important;
+        transition: left 1s;
+    }
+
+    div.navMenu input[type="checkbox"].menuHamburger~div.menuItems * {
+        transition: all .3s;
+    }
+
+    div.navMenu input[type="checkbox"].menuHamburger:not(:checked)~div.menuItems * {
+        opacity: 0;
+    }
+
+    div.navMenu input[type="checkbox"].menuHamburger:checked~div.menuItems {
+        left: 0 !important;
+    }
+
+    div.navMenu div.menuItems {
+        position: absolute !important;
+        top: 60px;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 65px);
+        /*-120px*/
+        background-color: rgb(var(--navBarBackgroundColorBrighter));
+        flex-direction: column;
+        z-index: 999999;
+    }
+
+    div.navMenu div.menuItems a {
+        font-size: 60px;
+    }
+
+    div.navMenu div.menuItems div.menuLinkSet {
+        display: flex;
+        flex-direction: column;
+        white-space: nowrap;
+        cursor: default;
+        /* width: 90%; */
+        align-items: center;
+        background-color: rgba(var(--mainBackgroundColor), 0.05);
+        padding: 20px;
+        border: 1px solid rgb(var(--mainBorderColor));
+        box-shadow: 0 1px 1px rgba(0, 0, 0, .05), 0px 0px 30px rgba(0, 0, 0, .1);
+        overflow: hidden;
+    }
+
+    div.navMenu div.menuItems div.menuLinkSet>a.menuLink {
+        width: fit-content;
+    }
+
+    div.navMenu div.menuItems div.menuLinkSet>a.menuLink:after {
+        content: "";
+        position: initial;
+    }
+
+    div.navMenu div.menuItems div.menuLinkSet div.linkSet {
+        all: initial;
+    }
+
+    div.navMenu div.menuItems div.menuLinkSet a.menuLink,
+    div.navMenu div.menuItems div.menuLinkSet div.linkSet>a {
+        position: relative;
+        margin: 30px !important;
+        padding: 1px 2px 0 2px !important;
+    }
+
+    @keyframes showLinkSetsMobile {
+        0% {
+            background-color: transparent;
+            padding: 0;
+            border: 1px solid transparent;
+            box-shadow: none;
+            height: fit-content;
+        }
+
+        20% {
+            background-color: transparent;
+            padding: 0;
+            border: 1px solid transparent;
+            box-shadow: none;
+            height: fit-content;
+        }
+
+        50% {
+            background-color: rgba(var(--mainBackgroundColor), 0.05);
+            border-color: rgb(var(--mainBorderColor));
+            box-shadow: 0 1px 1px rgba(0, 0, 0, .05), 0px 0px 30px rgba(0, 0, 0, .1);
+            padding: 0;
+        }
+
+        70% {
+            padding: 5px 20px 5px 20px;
+        }
+
+        100% {
+            margin: unset;
+            padding: 20px;
+            height: max-content;
+        }
+    }
+}

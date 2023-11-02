@@ -1,0 +1,146 @@
+/* div.navMenu {
+    background-color: rgba(var(--mainBackgroundColor), 0.1);
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+} */
+
+div.menuHeader {
+    background-color: rgba(var(--mainBackgroundColor), 0.1);
+    width: 100%;
+    height: 0;
+    /* height: 5px; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border: 5px solid transparent;
+    border-style: solid none solid none;
+}
+
+div.navMenu {
+    background-color: rgba(var(--mainBackgroundColor), 0.2);
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border: 5px transparent;
+    border-style: solid none solid none;
+    position: sticky;
+    top: 0;
+    flex-direction: row;
+    z-index: 100;
+    cursor: pointer;
+    flex-wrap: nowrap;
+}
+
+div.navMenu a.menuLogo {
+    width: 200px;
+    height: 50px;
+    margin: 0 20px 0 10px;
+    display: flex;
+    justify-content: center;
+}
+
+div.navMenu a.menuLogo img.menuLogoImage {
+    min-width: 50px;
+    height: 50px;
+    filter: hue-rotate(160deg);
+    opacity: .6;
+    -webkit-user-drag: none;
+}
+
+/* div.navMenu div.menuTitle {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Fira code";
+    color: rgb(97, 137, 153);
+    line-height: 0;
+} */
+
+div.navMenu div.menuItems {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: calc(100vw - 240px);
+    flex-wrap: nowrap;
+    /* transition: all 1s; */
+}
+
+div.navMenu div.menuItems a {
+    appearance: none;
+    -webkit-appearance: none;
+    font-size: 30px;
+    display: block;
+    white-space: nowrap;
+}
+
+
+
+/* div.navMenu input[type="checkbox"].menuHamburger:hover:after {
+    top: 3px;
+    height: calc(34px - (var(--menuHamburgerSize) * 2));
+} */
+
+div.navMenu div.menuItems div.menuLinkSet {
+    position: relative;
+}
+
+div.navMenu div.menuItems div.menuLinkSet>a.menuLink {
+    padding: 0 25px 0 0;
+    transition: all .3s;
+    margin: 0 5px 0 0;
+}
+
+div.navMenu div.menuItems div.menuLinkSet>a.menuLink:after {
+    content: "\e252";
+    font-family: "Glyphicons Halflings";
+    font-size: 20px;
+    position: absolute;
+    top: 5px;
+    right: 2px;
+    transform: rotate(-90deg);
+    transition: all .3s, color 0s;
+}
+
+div.navMenu div.menuItems div.menuLinkSet>a.menuLink:hover:after {
+    transform: rotate(0deg);
+    top: 10px;
+    right: 6px;
+}
+
+div.navMenu div.menuItems div.menuLinkSet>a.menuLink:hover {
+    padding: 0 30px 0 0;
+    margin: 0;
+}
+
+div.navMenu div.menuItems div.menuLinkSet div.linkSet {
+    visibility: hidden;
+    background-color: rgba(var(--mainBackgroundColor), 0.1);
+    padding: 10px;
+    border: 1px solid rgb(var(--mainBorderColor));
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05), 0px 0px 30px rgba(0, 0, 0, .1);
+    position: absolute;
+    white-space: nowrap;
+    cursor: default;
+    transform: translateY(-50px);
+    transition: .3s;
+    opacity: 0;
+}
+
+div.navMenu div.menuItems div.menuLinkSet div.linkSet>a {
+    margin: 10px;
+}
+
+div.navMenu div.menuItems div.menuLinkSet a.menuLink+div.linkSet:hover,
+div.navMenu div.menuItems div.menuLinkSet a.menuLink:hover+div.linkSet {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}

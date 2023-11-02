@@ -1,0 +1,13 @@
+<div class="menuHeader"></div>
+<div class="navMenu">
+    {{!-- <div class="menuTitle">Store</div> --}}
+    <a class="menuLogo noAnimation" href="{{HTTPs}}{{HOST}}:{{PORT}}">
+        <img class="menuLogoImage" src="/image/logo.png" alt="Store">
+    </a>
+    <input type="checkbox" class="menuHamburger">
+    <div class="menuItems">
+        {{#each (menuItems) as |menuItem|}}
+        {{{menuButton menuItem}}}
+        {{/each}}
+    </div>
+</div>

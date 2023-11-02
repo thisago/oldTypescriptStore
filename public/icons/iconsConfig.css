@@ -1,0 +1,256 @@
+/* #FONT */
+
+@font-face {
+    font-family: "IcoMoon";
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/icomoon.eot) format("embedded-opentype"), url(fonts/icomoon.woff) format("woff"), url(fonts/icomoon.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Glyphicons Halflings";
+    src: url(fonts/GlyphiconsHalflings.woff2) format("woff2"), url(fonts/GlyphiconsHalflings.woff) format("woff"), url(fonts/GlyphiconsHalflings.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Font Awesome regular";
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/FontAwesome-regular-400.woff2) format("woff2"), url(fonts/FontAwesome-regular-400.woff) format("woff"), url(fonts/FontAwesome-regular-400.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Font Awesome Solid";
+    font-style: normal;
+    font-weight: 900;
+    src: url(fonts/FontAwesome-solid-900.woff2) format("woff2"), url(fonts/FontAwesome-solid-900.woff) format("woff"), url(fonts/FontAwesome-solid-900.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Font Awesome Brands";
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/FontAwesome-brands-400.woff2) format("woff2"), url(fonts/FontAwesome-brands-400.woff) format("woff"), url(fonts/FontAwesome-brands-400.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Eva Icons";
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/EvaIcons.woff2) format("woff2"), url(fonts/EvaIcons.woff) format("woff"), url(fonts/EvaIcons.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: 'ElegantIcons';
+    src: url('fonts/ElegantIcons.eot');
+    src: url('fonts/ElegantIcons.eot?#iefix') format('embedded-opentype'), url('fonts/ElegantIcons.woff') format('woff'), url('fonts/ElegantIcons.ttf') format('truetype'), url('fonts/ElegantIcons.svg#ElegantIcons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* /FONT */
+
+*[class^='i-'], *[class*='i-'] {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: "Glyphicons Halflings", "Font Awesome Regular", "Font Awesome Solid", "Font Awesome Brands", "Eva Icons", "IcoMoon";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* #Configs */
+
+.i-config-lg {
+    font-size: 1.33333em;
+    line-height: .75em;
+    vertical-align: -.0667em
+}
+
+.i-config-xs {
+    font-size: .75em
+}
+
+.i-config-sm {
+    font-size: .875em
+}
+
+.i-config-1x {
+    font-size: 1em
+}
+
+.i-config-2x {
+    font-size: 2em
+}
+
+.i-config-3x {
+    font-size: 3em
+}
+
+.i-config-4x {
+    font-size: 4em
+}
+
+.i-config-5x {
+    font-size: 5em
+}
+
+.i-config-6x {
+    font-size: 6em
+}
+
+.i-config-7x {
+    font-size: 7em
+}
+
+.i-config-8x {
+    font-size: 8em
+}
+
+.i-config-9x {
+    font-size: 9em
+}
+
+.i-config-10x {
+    font-size: 10em
+}
+
+.i-config-fw {
+    text-align: center;
+    width: 1.25em
+}
+
+.i-config-ul {
+    list-style-type: none;
+    margin-left: 2.5em;
+    padding-left: 0
+}
+
+.i-config-ul>li {
+    position: relative
+}
+
+.i-config-li {
+    left: -2em;
+    position: absolute;
+    text-align: center;
+    width: 2em;
+    line-height: inherit
+}
+
+.i-config-border {
+    border: .08em solid #eee;
+    border-radius: .1em;
+    padding: .2em .25em .15em
+}
+
+.i-config-pull-left {
+    float: left
+}
+
+.i-config-pull-right {
+    float: right
+}
+
+.i-config-spin {
+    -webkit-animation: i-spin 2s linear infinite;
+    animation: i-spin 2s linear infinite
+}
+
+.i-config-pulse {
+    -webkit-animation: i-spin 1s steps(8) infinite;
+    animation: i-spin 1s steps(8) infinite
+}
+
+@-webkit-keyframes i-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes i-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+.i-config-rotate-90 {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg)
+}
+
+.i-config-rotate-180 {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+.i-config-rotate-270 {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg)
+}
+
+.i-config-flip-horizontal {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1)
+}
+
+.i-config-flip-vertical {
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1)
+}
+
+.i-config-flip-both, .i-config-flip-horizontal.i-config-flip-vertical, .i-config-flip-vertical {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)"
+}
+
+.i-config-flip-both, .i-config-flip-horizontal.i-config-flip-vertical {
+    -webkit-transform: scale(-1);
+    transform: scale(-1)
+}
+
+.i-config-stack {
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    position: relative;
+    vertical-align: middle;
+    width: 2.5em
+}
+
+.i-config-stack-1x, .i-config-stack-2x {
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%
+}
+
+.i-config-stack-1x {
+    line-height: inherit
+}
+
+.i-config-stack-2x {
+    font-size: 2em
+}
+
+.i-config-inverse {
+    color: #fff
+}
+
+/* /Configs */

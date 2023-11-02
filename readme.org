@@ -1,0 +1,20 @@
+#+title: Unfinished old TS store
+
+[[./images/home.png]]
+[[./images/login.png]]
+[[./images/register.png]]
+
+This was a learning project that I stopped at 2020, the goal was create an complete
+store template.
+
+** Stack
+
+- Typescript
+- Express
+- Mongoose
+- Passport
+- Handlebars
+
+** License
+
+MIT

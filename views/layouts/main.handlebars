@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}} - {{business}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=.85">
+    {{!-- <meta http-equiv="refresh" content="1"> --}}
+
+
+    <link rel="stylesheet" href="/style/main.min.css">
+    <link rel="stylesheet" href="/style/navBar.min.css">
+    <link rel="stylesheet" href="/style/navBarMobile.min.css">
+    <link rel="stylesheet" href="/style/default.min.css">
+    <link rel="stylesheet" href="/icons/iconsConfig.min.css">
+    <link rel="stylesheet" href="/style/defaultMobile.min.css">
+
+    <link rel="stylesheet" href="/style/stores.min.css">
+
+    {{#each _sections as |head|}}
+    {{{head}}}
+    {{/each}}
+
+    {{#each files.styles as |style|}}
+    <link rel="stylesheet" href="{{style}}">
+    {{/each}}
+</head>
+
+<body class="starting">
+    {{> _navMenu}}
+    {{{body}}}
+    {{#each files.scripts as |script|}}
+    <script src="/script/{{script}}"></script>
+    {{/each}}
+    <script src="/script/main.js"></script>
+    <script src="/script/inputs.js"></script>
+</body>
+
+</html>

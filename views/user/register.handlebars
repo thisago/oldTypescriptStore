@@ -1,0 +1,28 @@
+<div class="card card-center mgt-8">
+    <h2 class="title text-center mgt-3 mg-2 mgb-3">Create your account!</h2>
+    {{> _genericReturn}}
+    <form class="mg-8 mgt-3 mgb-6" method="post">
+        <input class="mgl-0 mgr-1" type="text" name="username" placeholder="Username"></input>
+        <span class="help help-popup-size-3 help-no-size"
+            data-content="Your username will be used for identify your user"></span>
+        <br>
+        <input class="mgl-0" type="text" name="firstname" placeholder="Name"></input>
+        <span class="help help-popup-size-3 help-no-size" data-content="Your real first name"></span>
+        <input class="mg-2 mgl-6 mgr-1" type="text" name="lastname" placeholder="Last name"></input>
+        <span class="help help-popup-size-3 help-no-size" data-content="Your real last name"></span>
+        <br>
+        <input class="mgt-3 mgl-0" type="email" name="email" placeholder="Email">
+        <span class="help help-popup-size-2 help-no-size" data-content="Your best email!"></span>
+        <input class="mg-2 mgl-6 mgr-1" type="text" name="cellphone" placeholder="Cellphone">
+        <span class="help help-popup-size-3 help-no-size" data-content="Your actual cellphone"></span>
+        <br>
+        <input class="mgt-3 mgl-0" type="password" data-eye-connect="passwordConfirm" name="password"
+            placeholder="Password">
+        <span class="help help-popup-size-3 help-no-size" data-content="Use your best password"></span>
+        <input class="mg-2 mgl-6 mgr-1" type="password" name="passwordConfirm" data-eye-connect="password"
+            placeholder="Confirm password">
+        <span class="help help-popup-size-3 help-no-size" data-content="Retype to verify if is same"></span>
+        <br>
+        <button type="submit" class="btn-large mgt-4 margin-center pd-1">Create your account!</button>
+    </form>
+</div>
